@@ -9,25 +9,27 @@ on:
 # Define the deployment job
 jobs:  
   deploy:
-  # Specify the environment for the job to run in
+    # Specify the environment for the job to run in
     runs-on: ubuntu-latest
-  # Define the steps in the job
+    
+    # Define the steps in the job
     steps:
       # Checkout the code from the repository
       - name: Checkout repository
-      uses: actions/checkout@v4 
+        uses: actions/checkout@v4
 
       # Sync the files to S3
       - name: Sync files to S3
-        run: aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} 
-        env: AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID }}
-             AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-             AWS_DEFAULT_REGION: us-east-1 
+        run: aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }}
+        env:
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: us-east-1
 
       # Invalidate the CloudFront cache
-      - name: Invalidate Cloud Front cache
+      - name: Invalidate CloudFront cache
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
-        env: AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID }}
-             AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-             AWS_DEFAULT_REGION: us-east-1 
-
+        env:
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: us-east-1
