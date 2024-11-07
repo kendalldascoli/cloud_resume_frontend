@@ -1,156 +1,214 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kendall D'Ascoli - Resume</title>
+    <title>Kendall D’Ascoli's Resume</title>
     <style>
-        /* General styles for the resume */
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
             line-height: 1.6;
             color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
         }
 
         .container {
-            width: 100%;
-            max-width: 800px;
+            width: 80%;
+            max-width: 900px;
             margin: 0 auto;
-        }
-
-        h1, h2, h3 {
-            color: #0044cc;
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
         h1 {
-            text-align: center;
             font-size: 32px;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            border-bottom: 2px solid #0044cc;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-
-        h3 {
-            font-size: 20px;
-            margin: 10px 0;
-        }
-
-        p {
-            margin: 5px 0;
-        }
-
-        .contact-info {
             text-align: center;
-            margin-bottom: 30px;
+            color: #2c3e50;
+            margin-bottom: 10px;
         }
 
-        .contact-info p {
-            margin: 5px;
-        }
-
-        .section {
+        p.contact-info {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
             margin-bottom: 20px;
         }
 
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-top: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: #2980b9;
+            margin-bottom: 5px;
+        }
+
+        p.job-title {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+
         ul {
-            padding-left: 20px;
+            list-style-type: disc;
+            margin-left: 20px;
         }
 
         li {
             margin-bottom: 10px;
         }
 
-        /* Add custom styles for easy visibility */
-        .highlight {
-            font-weight: bold;
-            color: #0044cc;
+        a {
+            color: #3498db;
+            text-decoration: none;
         }
 
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .skills, .community-service, .student-involvement {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .skills p, .community-service li, .student-involvement li {
+            flex: 1 1 45%;
+            margin-bottom: 10px;
+        }
+        
     </style>
 </head>
-
 <body>
-
     <div class="container">
-        <!-- Header Section -->
-        <h1>Kendall D'Ascoli</h1>
+        <h1>Kendall D’Ascoli</h1>
+        <p class="contact-info">Los Angeles, CA 90045 • <a href="mailto:kdascoli@lion.lmu.edu">kdascoli@lion.lmu.edu</a> • (619) 456-5573</p>
+        <p class="contact-info"><a href="https://www.linkedin.com/in/kendalldascolilmu">www.linkedin.com/in/kendalldascolilmu</a></p>
 
-        <!-- Contact Information -->
-        <div class="contact-info">
-            <p>Los Angeles, CA 90045 </p>
-            <p><a href="www.linkedin.com/in/kendalldascolilmu">LinkedIn Profile</a></p>
-        </div>
-
-        <!-- Education Section -->
         <div class="section">
             <h2>Education</h2>
-            <h3>Loyola Marymount University, Los Angeles CA</h3>
-            <p><span class="highlight">Bachelor of Arts Candidate</span> - Information Systems and Business Analytics, Expected May 2025</p>
-            <p>Relevant Projects:</p>
-            <ul>
-                <li>Designed BUILD's website for ideal UX</li>
-                <li>Developed prototype for a mock startup in an entrepreneurship class</li>
-            </ul>
-            <p>Relevant Coursework: Database Management Systems, Network Cloud Computing, Programming for Business Developments</p>
+            <p><strong>Loyola Marymount University</strong>, Los Angeles, CA<br>
+            Bachelor of Arts candidate, Information Systems and Business Analytics, May 2025</p>
+            <p><strong>Relevant Projects:</strong> Designed BUILD's website for ideal UX, Developed prototype for a mock startup in entrepreneurship class</p>
+            <p><strong>Relevant Coursework:</strong> Database Management Systems, Network Cloud Computing, Programming for Business Developments</p>
         </div>
 
-        <!-- Professional Experience Section -->
         <div class="section">
             <h2>Relevant Professional Experience</h2>
-            <h3>Aon, Los Angeles CA</h3>
-            <p><span class="highlight">Cyber Broker Intern</span> - Summer 2024</p>
+
+            <h3>Aon, Los Angeles, CA</h3>
+            <p class="job-title">Cyber Broker Intern, Summer 2024</p>
             <ul>
                 <li>Conducted in-depth analysis of cyber controls for large enterprises, providing strategic recommendations for enhancement and configuring precise insurance cost estimates.</li>
-                <li>Created multimodal presentations for senior brokers analyzing past policies, identifying improvement areas, and incorporating cyber quantifications.</li>
+                <li>Created multimodal presentations for senior brokers, analyzing past policies, identifying improvement areas, and incorporating cyber quantifications.</li>
                 <li>Refined networking skills with insurers by attending company trips and industry events.</li>
             </ul>
 
-            <h3>Sodexo, Los Angeles CA</h3>
-            <p><span class="highlight">Data Analytics Intern</span> - 2022-2023</p>
+            <h3>Sodexo, Los Angeles, CA</h3>
+            <p class="job-title">Data Analytics Intern, 2022-2023</p>
             <ul>
                 <li>Conducted data analyses for campus-wide products, providing insights into user behavior and preferences.</li>
-                <li>Produced recurring marketing reports for LMU Dining’s Instagram and presented findings to stakeholders and investors, contributing to data-driven decision making.</li>
-                <li>Organized and presented data in a digestible format weekly to supervisors, showcasing strong communication and data visualization skills.</li>
+                <li>Produced recurring marketing reports for LMU Dining’s Instagram and presented findings to stakeholders and investors, contributing to data-driven decision making and business recommendations.</li>
+                <li>Organized and presented data in a digestible format to supervisor on a weekly basis, showcasing strong communication, organization, and data visualization skills.</li>
+            </ul>
+
+            <h3>Business Innovation and Leadership Development (BUILD) Student Organization, Los Angeles, CA</h3>
+            <p class="job-title">Director of Marketing, 2022-2024</p>
+            <ul>
+                <li>Crafted visually compelling content for BUILD’s web and mobile platforms, ensuring consistent and user-friendly design.</li>
+                <li>Analyzed post statistics to inform data-driven strategies, fostering growth in our online presence and increasing engagement.</li>
+                <li>Implemented a feedback loop to create an inclusive environment, actively seeking input from members and the executive board to enhance the user experience.</li>
+            </ul>
+
+            <h3>Orangetheory Fitness (OTF), San Diego/Los Angeles, CA</h3>
+            <p class="job-title">Sales Associate, 2022-2024</p>
+            <ul>
+                <li>Addressed member concerns with a professional and objective approach, focusing on resolution and ensuring a positive member experience.</li>
+                <li>Presented the OTF concept to potential consumers, emphasizing clear communication and engagement.</li>
+                <li>Managed front desk operations and collaborated with the staff, contributing to a positive studio atmosphere.</li>
+            </ul>
+
+            <h3>Flashmonkey Inc., Remote</h3>
+            <p class="job-title">Marketing and Growth Intern, 2021-2022</p>
+            <ul>
+                <li>Advocated for Flashmonkey as an accessible tool within academic institutions, emphasizing its usability and benefits to users.</li>
+                <li>Executed social media marketing strategies to promote FlashMonkey, leveraging online channels to reach and engage with potential users.</li>
+                <li>Collaborated closely with the Founder, actively participating in brainstorming sessions to generate innovative ideas for designing user-friendly interfaces.</li>
+            </ul>
+
+            <h3>Make a Wish Foundation Youth Leadership Council (YLC), San Diego, CA</h3>
+            <p class="job-title">Marketing Team, 2020-2021</p>
+            <ul>
+                <li>Led the Spirit and Publicity Committee as a founding member of the San Diego YLC, establishing a strong visual identity and ensuring a cohesive and engaging brand.</li>
+                <li>Raised funds and project managed the planning of a “Wish Week” for the council’s honorary wish kid, contributing to the YLC’s $17k donation to Make-A-Wish San Diego.</li>
             </ul>
         </div>
 
-        <!-- Student Involvement Section -->
         <div class="section">
             <h2>Student Involvement</h2>
-            <p>Delta Sigma Pi Professional Business Fraternity | ISBA Society | Delta Gamma Sorority | Real Estate Society</p>
-        </div>
-
-        <!-- Community Service Section -->
-        <div class="section">
-            <h2>Community Service</h2>
-            <p>Habitat for Humanity | Feeding San Diego | Father Joe's Villages | Nourish LA | Special Needs Student Mentor</p>
-        </div>
-
-        <!-- Skills and Certification Section -->
-        <div class="section">
-            <h2>Skills and Certifications</h2>
-            <ul>
-                <li>Database Management (SQL, Access)</li>
-                <li>Excel Certified</li>
-                <li>Cybersecurity Google Career Certificate (in progress)</li>
-                <li>Programming Languages: Java, Python</li>
-                <li>Scrum</li>
+            <ul class="student-involvement">
+                <li>Delta Sigma Pi Professional Business Fraternity</li>
+                <li>ISBA Society</li>
+                <li>Delta Gamma Sorority</li>
+                <li>Real Estate Society</li>
             </ul>
         </div>
-    </div>
-<script src="js/visitor-counter.js"></script>
-<script>
-    visitorCounter();
-</script>
-<p>
-    Visitor #: <span id="visitor-counter"></span>
-</body>
 
-</html>
+        <div class="section">
+            <h2>Community Service</h2>
+            <ul class="community-service">
+                <li>Habitat for Humanity</li>
+                <li>Feeding San Diego</li>
+                <li>Father Joe's Villages</li>
+                <li>Nourish LA</li>
+                <li>Special Needs Student Mentor</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Skills and Certification</h2>
+            <div class="skills">
+                <p>Database Management (SQL, Access)</p>
+                <p>Excel Certified</p>
+                <p>Cloud Infrastructure Management</p>
+                <p>API Development</p>
+                <p>Cloud Security</p>
+                <p>Java</p>
+                <p>Python</p>
+                <p>Scrum</p>
+                <p>Cybersecurity Google Career Certificate (in progress)</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="http://www.linkedin.com/in/kendalldascolilmu">LinkedIn</a></li>
+                <li><a href="https://kendall679.wordpress.com/">Personal Blog</a></li>
+                <li><a href="https://www.lmudeltasigmapi.com/">Delta Sigma Pi</a></li>
+                <li><a href="
