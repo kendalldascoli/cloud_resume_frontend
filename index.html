@@ -218,3 +218,15 @@
                 <li><a href="http://www.linkedin.com/in/kendalldascolilmu">LinkedIn</a></li>
                 <li><a href="https://kendall679.wordpress.com/">Personal Blog</a></li>
                 <li><a href="https://www.lmudeltasigmapi.com/">Delta Sigma Pi</a></li>
+
+
+                function visitorCounter(){
+                    fetch("https://djipi8gkh1.execute-api.us-east-1.amazonaws.com/visitorCounter")
+                        .then(response => response.text())
+                        .then((body) => {
+                            document.getElementById("visitor-counter").innerHTML = body;
+                        })
+                        .catch(error => console.error('Error fetching visitor count:', error));
+                }
+                
+                
